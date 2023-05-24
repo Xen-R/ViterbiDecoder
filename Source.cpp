@@ -17,7 +17,7 @@ int main() {
 	}
 	for (int i = 0; i < p.size(); i++) {
 		double ber = 0;
-		int num = 10; //количество экспериментов
+		int num = 10000; //количество экспериментов
 		int len = 100; //максимальная длина слова - 1
 		for (int j = 0; j < num; j++) {
 			uint16_t size = rand()%len + 1; // генерация длины слова
