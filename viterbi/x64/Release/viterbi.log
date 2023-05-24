@@ -1,16 +1,7 @@
 ﻿  Source.cpp
-  Trellis.cpp
-C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(14,20): warning C4244: инициализация: преобразование "double" в "uint16_t", возможна потеря данных
-C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(38,17): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
-C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(64,29): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
-C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(101,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  ViterbiDecoder.cpp
-C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(16,22): warning C4244: инициализация: преобразование "double" в "uint16_t", возможна потеря данных
-C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(49,46): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
-C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(58,63): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
   Создание кода
-  2 of 339 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+  1 of 339 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   viterbi.vcxproj -> C:\Users\melkor\source\repos\viterbi\x64\Release\viterbi.exe
