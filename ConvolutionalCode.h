@@ -1,17 +1,17 @@
-#pragma once
+п»ї#pragma once
 #include<stdint.h>
 #include<vector>
-class ConvolutionalCode //класс для хранения информации о коде (количества блоков в регистре и полиномов)
+class ConvolutionalCode //РєР»Р°СЃСЃ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєРѕРґРµ (РєРѕР»РёС‡РµСЃС‚РІР° Р±Р»РѕРєРѕРІ РІ СЂРµРіРёСЃС‚СЂРµ Рё РїРѕР»РёРЅРѕРјРѕРІ)
 {
 private:
-	uint16_t num_of_blocks; //количество блоков в регистре
-	uint16_t num_of_output; //количество кодовых бит для 1 информационного бита
-	std::vector<std::vector<uint16_t>> polynoms; //вектор полиномов кода
+	uint16_t num_of_blocks; //РєРѕР»РёС‡РµСЃС‚РІРѕ Р±Р»РѕРєРѕРІ РІ СЂРµРіРёСЃС‚СЂРµ
+	uint16_t num_of_output; //РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРґРѕРІС‹С… Р±РёС‚ РґР»СЏ 1 РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРіРѕ Р±РёС‚Р°
+	std::vector<std::vector<uint16_t>> polynoms; //РІРµРєС‚РѕСЂ РїРѕР»РёРЅРѕРјРѕРІ РєРѕРґР°
 public:
 	ConvolutionalCode();
 	ConvolutionalCode(uint16_t n_blocks, std::vector<uint16_t>& poly);
 	uint16_t get_blocks_num();
 	uint16_t get_out_size();
-	std::vector<uint16_t> poly_res(std::vector<uint16_t> state); //функция вычисления кодовых бит для регистра с заданным состоянием
+	std::vector<uint16_t> poly_res(std::vector<uint16_t> state); //С„СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕРґРѕРІС‹С… Р±РёС‚ РґР»СЏ СЂРµРіРёСЃС‚СЂР° СЃ Р·Р°РґР°РЅРЅС‹Рј СЃРѕСЃС‚РѕСЏРЅРёРµРј
 };
 
