@@ -5,6 +5,7 @@
 #include"ViterbiDecoder.h"
 
 int main() {
+	system("chcp 1251");
 	std::vector<uint16_t> poly; //задание кода происходит при помощи задания количества блоков в регистре и полиномов, определяющих выходные биты
 	poly.push_back(5);
 	poly.push_back(7);
