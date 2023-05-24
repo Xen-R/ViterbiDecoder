@@ -1,13 +1,13 @@
-#pragma once
+п»ї#pragma once
 #include"ConvolutionalCode.h"
-class ConvCoder //класс кодера
+class ConvCoder //РєР»Р°СЃСЃ РєРѕРґРµСЂР°
 {
 private:
 	ConvolutionalCode code;
 
 public:
 	ConvCoder(ConvolutionalCode &c);
-	std::vector<uint16_t> encode(std::vector<uint16_t> word); //функция кодирования
+	std::vector<uint16_t> encode(std::vector<uint16_t> word); //С„СѓРЅРєС†РёСЏ РєРѕРґРёСЂРѕРІР°РЅРёСЏ
 
 };
 

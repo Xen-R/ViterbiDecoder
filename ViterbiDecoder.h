@@ -1,14 +1,14 @@
-#pragma once
+п»ї#pragma once
 #include"ConvolutionalCode.h"
 #include "Trellis.h"
 
-class ViterbiDecoder //класс декодера
+class ViterbiDecoder //РєР»Р°СЃСЃ РґРµРєРѕРґРµСЂР°
 {
 private:
 	ConvolutionalCode code;
-	Trellis trel; //решетка кода
+	Trellis trel; //СЂРµС€РµС‚РєР° РєРѕРґР°
 
 public:
 	ViterbiDecoder(ConvolutionalCode& c);
-	std::vector<uint16_t> decode(std::vector<uint16_t> enc); //функция декодирования
+	std::vector<uint16_t> decode(std::vector<uint16_t> enc); //С„СѓРЅРєС†РёСЏ РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ
 };

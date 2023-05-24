@@ -1,4 +1,4 @@
-#include "ConvolutionalCode.h"
+ï»¿#include "ConvolutionalCode.h"
 
 ConvolutionalCode::ConvolutionalCode()
 {
@@ -10,7 +10,7 @@ ConvolutionalCode::ConvolutionalCode(uint16_t n_blocks, std::vector<uint16_t>& p
 {
 	num_of_blocks = n_blocks;
 	num_of_output = poly.size(); //ADD POLY SIZE CHECK
-	for (int i = 0; i < poly.size(); i++) { //ïåðåâîä ïîëèíîìîâ â ôîðìó äâîè÷íûõ âåêòîðîâ
+	for (int i = 0; i < poly.size(); i++) { //Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´ Ð¿Ð¾Ð»Ð¸Ð½Ð¾Ð¼Ð¾Ð² Ð² Ñ„Ð¾Ñ€Ð¼Ñƒ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ñ‹Ñ… Ð²ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð²
 		std::vector<uint16_t> p;
 		uint16_t num = poly.at(i);
 		while (num > 0) {
@@ -38,7 +38,7 @@ std::vector<uint16_t> ConvolutionalCode::poly_res(std::vector<uint16_t> state)
 	for (int i = 0; i < polynoms.size(); i++) {
 		uint16_t tmp = 0;
 		for (int j = 0; j < polynoms.at(i).size(); j++) {
-			tmp = tmp ^ (polynoms.at(i).at(j) & state.at(j)); //âû÷èñëåíèå ðåçóëüòàòà ïîäñòàíîâêè áèò â ðåãèñòðå (íà âõîäå è â áëîêàõ) â ïîëèíîìû
+			tmp = tmp ^ (polynoms.at(i).at(j) & state.at(j)); //Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ð° Ð¿Ð¾Ð´ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸ Ð±Ð¸Ñ‚ Ð² Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ðµ (Ð½Ð° Ð²Ñ…Ð¾Ð´Ðµ Ð¸ Ð² Ð±Ð»Ð¾ÐºÐ°Ñ…) Ð² Ð¿Ð¾Ð»Ð¸Ð½Ð¾Ð¼Ñ‹
 		}
 		result.push_back(tmp);
 	}

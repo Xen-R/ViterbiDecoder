@@ -1,28 +1,28 @@
-#include "ConvCoder.h"
+п»ї#include "ConvCoder.h"
 
 ConvCoder::ConvCoder(ConvolutionalCode &c)
 {
 	code = c;
 }
 
-std::vector<uint16_t> ConvCoder::encode(std::vector<uint16_t> word) //функция кодирования
+std::vector<uint16_t> ConvCoder::encode(std::vector<uint16_t> word) //С„СѓРЅРєС†РёСЏ РєРѕРґРёСЂРѕРІР°РЅРёСЏ
 {
 	std::vector<uint16_t> result;
 	std::vector<uint16_t> state;
 	for (int i = 0; i < code.get_blocks_num(); i++) {
-		state.push_back(0); //изначально в блоках регистра содержатся нули
+		state.push_back(0); //РёР·РЅР°С‡Р°Р»СЊРЅРѕ РІ Р±Р»РѕРєР°С… СЂРµРіРёСЃС‚СЂР° СЃРѕРґРµСЂР¶Р°С‚СЃСЏ РЅСѓР»Рё
 	}
 	for (int i = 0; i < word.size(); i++) {
-		state.insert(state.begin(), word.at(i)); //подача бита слова на вход регистра
-		std::vector<uint16_t> out = code.poly_res(state); //вычисление кодовых битов для текущего состояния регистра
+		state.insert(state.begin(), word.at(i)); //РїРѕРґР°С‡Р° Р±РёС‚Р° СЃР»РѕРІР° РЅР° РІС…РѕРґ СЂРµРіРёСЃС‚СЂР°
+		std::vector<uint16_t> out = code.poly_res(state); //РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕРґРѕРІС‹С… Р±РёС‚РѕРІ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЂРµРіРёСЃС‚СЂР°
 		result.insert(result.end(), out.begin(), out.end());
-		state.pop_back(); //сдвиг в регистре - выход бита из последнего блока
+		state.pop_back(); //СЃРґРІРёРі РІ СЂРµРіРёСЃС‚СЂРµ - РІС‹С…РѕРґ Р±РёС‚Р° РёР· РїРѕСЃР»РµРґРЅРµРіРѕ Р±Р»РѕРєР°
 	}
-	for (int i = 0; i < code.get_blocks_num()+1; i++) { //приведение слова в нулевое состояние посредством подачи нулей до момента заполнения всех блоков регистра нулями
-		state.insert(state.begin(),0); //подача 0 на вход регистра
-		std::vector<uint16_t> out = code.poly_res(state); //вычисление кодовых битов для текущего состояния регистра
+	for (int i = 0; i < code.get_blocks_num()+1; i++) { //РїСЂРёРІРµРґРµРЅРёРµ СЃР»РѕРІР° РІ РЅСѓР»РµРІРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РїРѕСЃСЂРµРґСЃС‚РІРѕРј РїРѕРґР°С‡Рё РЅСѓР»РµР№ РґРѕ РјРѕРјРµРЅС‚Р° Р·Р°РїРѕР»РЅРµРЅРёСЏ РІСЃРµС… Р±Р»РѕРєРѕРІ СЂРµРіРёСЃС‚СЂР° РЅСѓР»СЏРјРё
+		state.insert(state.begin(),0); //РїРѕРґР°С‡Р° 0 РЅР° РІС…РѕРґ СЂРµРіРёСЃС‚СЂР°
+		std::vector<uint16_t> out = code.poly_res(state); //РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕРґРѕРІС‹С… Р±РёС‚РѕРІ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЂРµРіРёСЃС‚СЂР°
 		result.insert(result.end(), out.begin(), out.end());
-		state.pop_back(); //сдвиг в регистре - выход бита из последнего блока
+		state.pop_back(); //СЃРґРІРёРі РІ СЂРµРіРёСЃС‚СЂРµ - РІС‹С…РѕРґ Р±РёС‚Р° РёР· РїРѕСЃР»РµРґРЅРµРіРѕ Р±Р»РѕРєР°
 	}
 
 	return result;
