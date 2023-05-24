@@ -1,0 +1,16 @@
+﻿  ConvCoder.cpp
+  ConvolutionalCode.cpp
+C:\Users\melkor\source\repos\viterbi\viterbi\ConvolutionalCode.cpp(12,29): warning C4267: =: преобразование из "size_t" в "uint16_t"; возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\ConvolutionalCode.cpp(32,31): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
+  Source.cpp
+  Trellis.cpp
+C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(49,17): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(78,29): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\Trellis.cpp(114,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  ViterbiDecoder.cpp
+C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(28,17): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(29,16): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(52,46): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
+C:\Users\melkor\source\repos\viterbi\viterbi\ViterbiDecoder.cpp(59,63): warning C4267: инициализация: преобразование из "size_t" в "uint16_t"; возможна потеря данных
+  Создание кода...
+  viterbi.vcxproj -> C:\Users\melkor\source\repos\viterbi\x64\Debug\viterbi.exe
